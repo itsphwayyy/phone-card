@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. Added rel="stylesheet" so Bootstrap loads -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .price{
+            color: crimson;
+        }
+
+        .instock{
+            color: rgb(63, 253, 72);
+        }
+
+        .stock{
+            color: #e60000;
+        }
+
+        .card {
+            overflow: visible !important; /* Allows badge to hang outside the card borders */
+            }
+
+            .discount {
+            position: absolute;
+            top: -10px;                  /* Shifts badge slightly ABOVE the top edge */
+            left: -10px;                 /* Shifts badge slightly LEFT of the outer edge */
+            z-index: 10;                 /* Places badge over the image border */
+            
+            /* Text & Appearance */
+            background-color: #e60000;   /* Vibrant Red */
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            
+            /* Modern tab sizing */
+            padding: 6px 14px;
+            border-radius: 6px;
+            
+            /* Elevation shadow so it pops off the card */
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Styles ALL Bootstrap cards on your site */
+        .card {
+            border: none;
+            overflow: visible !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-light p-4">
+
+    <div class="container-sm">
+        <!-- 2. Fixed row-cols spelling and moved closing tag to wrap the card -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100 p-0">
+                    <h4 class="discount" style="color: white; background-color: red;">Save $50</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQ3eROWesC1kAu8_7olEvTOIX9WemhIqJfwkzom0HsQ&s=10" class="card-img-top" alt="Phone1">
+                    <div class="p-3 d-flex flex-column justify-content-between">
+                        <h5 class="phone-name">Samsung Galaxy A37</h5>
+                        
+                        <!-- Prices now sit side-by-side -->
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <h6 class="price mb-0">$449.99</h6>
+                            <span class="text-muted"><s>$499.99</s></span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="instock fa-solid fa-circle"></i>
+                            <h6 style="color: rgb(63, 253, 72);">In stock</h6>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 p-0">
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS36eLSotQbaXsPj9ZfK49sK9Nu42t9I_0YiHfQRhJplA&s" class="card-img-top" alt="Phone1">
+                    <div class="p-3 d-flex flex-column justify-content-between">
+                        <h5 class="phone-name">Samsung Galaxy A57</h5>
+                        
+                        <!-- Prices now sit side-by-side -->
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <h6 class="mb-0">$549.99</h6>
+                            
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="instock fa-solid fa-circle"></i>
+                            <h6 style="color: rgb(63, 253, 72);">In stock</h6>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 p-0">
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQ3eROWesC1kAu8_7olEvTOIX9WemhIqJfwkzom0HsQ&s=10" class="card-img-top" alt="Phone1">
+                    <div class="p-3 d-flex flex-column justify-content-between">
+                        <h5 class="phone-name">Samsung Galaxy A07</h5>
+                        
+                        <!-- Prices now sit side-by-side -->
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <h6 class="mb-0">$449.99</h6>
+                            
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="stock fa-solid fa-circle"></i>
+                            <h6 style="color: #e60000;">Out of stock</h6>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100 p-0">
+                    <h4 class="discount" style="color: white; background-color: red;">Save $50</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQ3eROWesC1kAu8_7olEvTOIX9WemhIqJfwkzom0HsQ&s=10" class="card-img-top" alt="Phone1">
+                    <div class="p-3 d-flex flex-column justify-content-between">
+                        <h5 class="phone-name">Samsung Galaxy A37</h5>
+                        
+                        <!-- Prices now sit side-by-side -->
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <h6 class="price mb-0">$449.99</h6>
+                            <span class="text-muted"><s>$499.99</s></span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="instock fa-solid fa-circle"></i>
+                            <h6 style="color: rgb(63, 253, 72);">In stock</h6>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            
+
+        </div> <!-- Closing row tag -->
+    </div>
+
+</body>
+</html>
